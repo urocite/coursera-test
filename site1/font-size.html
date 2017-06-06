@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Setting Font Size</title>
+	<style>
+	/*kogato se izpolzva 2em, 4em i t.n. se vzema purvonachalno zadadenia font-size, umnojava se * 2, 4 i t.n. i se PRIBAVQ kum originalniat font-size, NE SE OVERWRITEVA, s .5em se razdelq napolovina, v tazi situacia 2em = 200%*/
+		body {
+			font-size: 120%;
+		}
+	</style>
+</head>
+<body>
+	<div>Regular text</div>
+	<div style="font-size: 2em;">2em text
+		<div style="font-size:2em;">4em text
+			<div style="font-size: .5em;">2em again!</div>
+		</div>
+	</div>
+</body>
+</html>

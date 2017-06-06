@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Adjacent and General sibling selectors</title>
+	<style>
+		body {
+			background-color: purple;
+		}
+		/* ADJACENT EXPLANATION - This is referred to as an adjacent selector or next-sibling selector. It will select only the specified element that immediately follows the former specified element. 
+		ADJACENT SYNTAX - former_element + target_element { style properties } */
+		li:first-of-type + li {
+			color: red;
+		}
+
+		/* GENERAL EXPLANATION - prilaga {style properties} na VTORIA element samo ako PURVIQ element go predhojda (namira se predi nego v koda) i ako imat edin i sushti roditel
+		GENERAL SYNTAX - element ~ element {style properties} */
+		p ~ span {
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Adjacent and General sibling selectors</h1>
+	<h2>Adjacemts sibling selector</h2>
+	<ul>
+		<li>One</li>
+		<li>Two</li>
+		<li>Three</li>
+	</ul>
+	<h2>General sibling selector</h2>
+	<span>This is not red.</span>
+	<p>Here is a paragraph.</p>
+	<code>Here is some code.</code>
+	<span>And here is a span.</span>
+	<code>More code...</code>
+	<span>And this is also red.</span>
+</body>
+</html>
